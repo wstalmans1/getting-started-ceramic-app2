@@ -1,0 +1,67 @@
+{
+    "models": {
+        "Posts": {
+            "interface": false,
+            "implements": [],
+            "id": "kjzl6hvfrbw6c822s0cj1ug59spj648ml8a6mbqaz91wx8zx3mlwi76tfh3u1dy",
+            "accountRelation": {
+                "type": "list"
+            }
+        },
+        "SimpleProfile": {
+            "interface": false,
+            "implements": [],
+            "id": "kjzl6hvfrbw6c5i55ks5m4hhyuh0jylw4g7x0asndu97i7luts4dfzvm35oev65",
+            "accountRelation": {
+                "type": "single"
+            }
+        }
+    },
+    "objects": {
+        "Posts": {
+            "tag": {
+                "type": "string",
+                "required": true,
+                "immutable": false
+            },
+            "body": {
+                "type": "string",
+                "required": true,
+                "immutable": false
+            },
+            "title": {
+                "type": "string",
+                "required": true,
+                "immutable": false
+            },
+            "ranking": {
+                "type": "integer",
+                "required": true,
+                "immutable": false
+            },
+            "created_at": {
+                "type": "datetime",
+                "required": true,
+                "immutable": false
+            }
+        },
+        "SimpleProfile": {
+            "displayName": {
+                "type": "string",
+                "required": true,
+                "immutable": false
+            }
+        }
+    },
+    "enums": {},
+    "accountData": {
+        "postsList": {
+            "type": "connection",
+            "name": "Posts"
+        },
+        "simpleProfile": {
+            "type": "node",
+            "name": "SimpleProfile"
+        }
+    }
+}
